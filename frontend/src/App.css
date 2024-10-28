@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..600;1,100..600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+#root {
+  /* min-width: 1000px; */
+  /* margin: 0 auto; */
+  padding: 0.5rem;
+  /* text-align: center; */
+  background-color: #242424;
+}
+
+
+.name{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;  
+  font-family: "Jost";
+  font-weight: 100;
+}
+
+.veer{
+  display: flex;
+  align-items: center;
+}
+
+.children {
+  font-family: 'Cantarell';
+  font-size: 80px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #af5fff, #fe8f7b, #ba3a7c); 
+  background-size: 200%; 
+  background-clip: inherit;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientMove 4s ease-in-out infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0%; }
+  50% { background-position: 100%; }
+  100% { background-position: 0%; }
+}
+
+.home{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap-input-18 { 
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap-input-18 .search {
+  margin: 20px;
+}
+
+.wrap-input-18 .search > div {
+  display: inline-block;
+  position: relative;
+}
+
+.wrap-input-18 .search > div:after {
+  content: "";
+  background: rgb(181, 114, 204);
+  width: 4px;
+  height: 20px;
+  position: absolute;
+  top: 40px;
+  right: 2px;
+  transform: rotate(140deg);
+}
+
+.wrap-input-18 .search > div > input {
+  color: white;
+  font-size: 16px;
+  background: transparent;
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  border: solid 3px rgb(181, 114, 204);
+  outline: none;
+  border-radius: 35px;
+  transition: width 0.5s;
+}
+
+.wrap-input-18 .search > div > input::placeholder {
+  color: #efefef;
+  opacity: 0;
+  transition: opacity 4s ease-in-out smooth;
+  padding: 10px;
+}
+
+.wrap-input-18 .search > div > input:focus::placeholder {
+  opacity: 0.5;
+}
+
+.wrap-input-18 .search > div > input:focus,
+.wrap-input-18 .search > div > input:not(:placeholder-shown) {
+  width: 250px;
+  padding-left: 20px;
+  font-family: "Montserrat";
+}

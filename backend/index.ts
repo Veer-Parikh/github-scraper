@@ -19,6 +19,7 @@ interface RepoData {
     lastUpdated: Date;
     url: string;
 }
+
 const scrapeGitHub = async (usernamee: string): Promise<RepoData[]> => {
     const repos: RepoData[] = [];
     
@@ -100,4 +101,4 @@ app.get("/get/:username",getRepos)
 
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
-  });
+});
