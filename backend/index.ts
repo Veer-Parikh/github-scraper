@@ -3,12 +3,18 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import prisma from './db';
 import express from "express"
+import cors from "cors"
 
 const app = express();
 const port = process.env.PORT || 5000;
 
-// Middleware to parse JSON bodies
 app.use(express.json());
+
+app.use(
+  cors({
+      origin:'*'
+  })
+)
 
 interface RepoData {
     username: string;
