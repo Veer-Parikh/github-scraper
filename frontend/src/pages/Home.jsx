@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar'
+import axios from 'axios';
 import "../App.css"
+
 const Home = () => {
   const [searchValue, setSearchValue] = useState('');
+  const navigate = useNavigate();
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
-      localStorage.setItem('searchQuery', searchValue); 
-      
+      // localStorage.setItem('searchQuery', searchValue); 
+      navigate(`/${searchValue}`)
     }
   };
 
